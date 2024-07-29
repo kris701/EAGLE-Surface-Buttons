@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -148,7 +148,7 @@
 <description>Surface Buttons
 A collection of different surface style buttons.</description>
 <packages>
-<package name="BTN_1">
+<package name="BTN_5MM">
 <pad name="P$1" x="-3.175" y="-0.127" drill="0.6" shape="offset"/>
 <pad name="P$2" x="3.429" y="-0.127" drill="0.6" shape="offset" rot="R180"/>
 <polygon width="0.127" layer="30">
@@ -218,42 +218,34 @@ A collection of different surface style buttons.</description>
 </package>
 </packages>
 <symbols>
-<symbol name="BTN_1">
-<pin name="P$1" x="5.08" y="11.43" length="middle"/>
-<pin name="P$2" x="-3.81" y="0" length="middle" rot="R180"/>
+<symbol name="BTN_SYM">
+<pin name="P$1" x="6.35" y="0" visible="off" length="short" rot="R180"/>
+<pin name="P$2" x="-2.54" y="0" visible="off" length="short"/>
 <polygon width="0.254" layer="94">
-<vertex x="5.08" y="0"/>
-<vertex x="5.08" y="8.89"/>
-<vertex x="3.81" y="8.89"/>
-<vertex x="3.81" y="1.27"/>
-<vertex x="0" y="1.27"/>
-<vertex x="0" y="8.89"/>
-<vertex x="-1.27" y="8.89"/>
-<vertex x="-1.27" y="1.27"/>
-<vertex x="-3.81" y="1.27"/>
-<vertex x="-3.81" y="0"/>
+<vertex x="0" y="5.08"/>
+<vertex x="0" y="-2.54"/>
+<vertex x="1.27" y="-2.54"/>
+<vertex x="1.27" y="3.81"/>
+<vertex x="3.81" y="3.81"/>
+<vertex x="3.81" y="5.08"/>
 </polygon>
 <polygon width="0.254" layer="94">
-<vertex x="-3.81" y="11.43"/>
-<vertex x="-3.81" y="2.54"/>
-<vertex x="-2.54" y="2.54"/>
-<vertex x="-2.54" y="10.16"/>
-<vertex x="1.27" y="10.16"/>
-<vertex x="1.27" y="2.54"/>
+<vertex x="3.81" y="-5.08"/>
+<vertex x="3.81" y="2.54"/>
 <vertex x="2.54" y="2.54"/>
-<vertex x="2.54" y="10.16"/>
-<vertex x="5.08" y="10.16"/>
-<vertex x="5.08" y="11.43"/>
+<vertex x="2.54" y="-3.81"/>
+<vertex x="0" y="-3.81"/>
+<vertex x="0" y="-5.08"/>
 </polygon>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BTN_1" prefix="BTN">
+<deviceset name="BTN_5MM" prefix="BTN">
 <gates>
-<gate name="G$1" symbol="BTN_1" x="5.08" y="-5.08"/>
+<gate name="G$1" symbol="BTN_SYM" x="5.08" y="-5.08"/>
 </gates>
 <devices>
-<device name="" package="BTN_1">
+<device name="" package="BTN_5MM">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
